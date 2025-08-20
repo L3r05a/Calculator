@@ -1,0 +1,40 @@
+
+html {
+   box-sizing: border-box;
+ }
+ *, *:before, *:after {
+   box-sizing: inherit;
+ }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+ /* .screen .operators .numbers {
+    display: flex;
+   gap: 10px;
+    
+ } */
+    .screen {
+    margin: 10px;
+    margin-top: 30px;
+ }
+
+#screen {
+   width: 150px;
+    height: 30px;
+    border: 3px solid;
+}
+
+ .operators{
+    margin: 10px;
+ } 
+
+ .numbers{
+ 
+    width: 150px;
+    margin: 10px;
+
+ }
+
