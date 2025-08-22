@@ -11,19 +11,31 @@ body {
     flex-direction: column;
 }
 
+button {
+
+   font-size: large;
+
+}
+
  /* .screen .operators .numbers {
     display: flex;
    gap: 10px;
     
  } */
-    .screen {
-    margin: 10px;
-    margin-top: 30px;
+    .screen{
+   height: 40px;
+   width:  150px;
+   border: 3px;
+   border-style: solid; 
+   color: black;
+   margin: 10px;
+   margin-top: 30px;
  }
 
 #screen {
+   font-size: large;
    width: 150px;
-    height: 30px;
+    height: 40px;
     border: 3px solid;
 }
 
@@ -31,10 +43,13 @@ body {
     margin: 10px;
  } 
 
- .numbers{
+ .numbers {
  
     width: 150px;
     margin: 10px;
+    
 
  }
+
+
 
