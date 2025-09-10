@@ -34,10 +34,10 @@ document.addEventListener('keydown', function(event){
 
 const key = event.key;
 
-//match key pressed to existing numerals buttons values
+//match key pressed to existing numerals buttons values as array
 
 if(!isNaN(key) || key === '.'){
-
+    
     const button = [...numerals].find(btn => btn.value === key);
 
     if (button) button.click();
@@ -67,8 +67,6 @@ if (key === 'Backspace'){
 
 });
 
-
-
 //BACKSPACE button logic
 
 backspace.addEventListener('click', function () {
@@ -76,11 +74,9 @@ backspace.addEventListener('click', function () {
 if (currentInput !== '') {
     currentInput = currentInput.slice(0, -1);
     display.value = currentInput;
-
 }
 
 })
-   
 
 //monitors NUMBER buttons and returns value
 
@@ -88,7 +84,7 @@ if (currentInput !== '') {
 
     button.addEventListener('click', function() {
 
-//  if result is displayed on number click then resets flag
+//counter for decimal point single use only 
 
 if(button.value === '.'){
             decimalCount ++;
@@ -98,6 +94,8 @@ if(button.value === '.'){
             return;
         }
 
+//  result displayed logic to clear screen for next entry
+
         if (resultDisplayed) {
             
         currentInput = '';
@@ -105,6 +103,7 @@ if(button.value === '.'){
         resultDisplayed = false;
 
         }
+
 
     currentInput += button.value;
 
@@ -132,7 +131,7 @@ if (firstOperand !==null && operator !==null &&currentInput !==''){
 
     //divide by zero safeguard in chained operation logic
     if (isNaN(result)){
-        display.value = 'can\'t do that man';
+        display.value = 'nope';
         currentInput = '';
         firstOperand = null;
         oper = null;
@@ -177,7 +176,7 @@ console.log(result, typeof result)
 
 if(isNaN(result)){
 
-    display.value = 'can\'t do that man';
+    display.value = 'nope';
 
     currentInput = ''; 
 
@@ -239,18 +238,18 @@ function addition (a,b){
     
 }
 
-function subtraction (a,b){
+    function subtraction (a,b){
 
-    return a - b;
-}
+        return a - b;
+    }
 
-function multiplication (a,b){
+        function multiplication (a,b){
 
-    return a * b;
-}
+            return a * b;
+        }
 
-function division (a,b){
+            function division (a,b){
 
-    return a / b;
-}
+                return a / b;
+            }
 

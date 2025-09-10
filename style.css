@@ -12,6 +12,10 @@ body {
     flex-wrap: nowrap;
 }
 
+p {
+   margin: 10px;
+}
+
 button {
    
    font-size:xx-large;
@@ -19,28 +23,34 @@ button {
 }
     .screen{
    height: 40px;
-   width:  150px;
+   width:  170px;
    border: 3px;
    border-style: solid; 
    color: black;
    margin: 10px;
-   margin-top: 100px;
+   margin-top: 10px;
    font-size: x-large;
  }
 
   .numbers {
- 
+   display: flex;
+   flex-wrap: wrap;
     width: 125px;
     margin: 10px;
-    
-
+    gap: 10px;
+      
  }
 
-
  .operators{
-    margin: 10px;
-    width: 150px;
- } 
+   display: flex;
+   margin: 10px;
+   width: 150px;
+   flex-wrap: wrap; 
+   gap: 10px;
+ 
+
+} 
+
 
 
 
